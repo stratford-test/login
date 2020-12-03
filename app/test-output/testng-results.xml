@@ -1,25 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-23T22:26:01 EST" name="Default suite" finished-at="2020-11-23T22:26:09 EST" duration-ms="8293">
+  <suite started-at="2020-12-02T17:31:24 EST" name="PositveLoginTest" finished-at="2020-12-02T17:31:33 EST" duration-ms="8595">
     <groups>
     </groups>
-    <test started-at="2020-11-23T22:26:01 EST" name="Default test" finished-at="2020-11-23T22:26:09 EST" duration-ms="8293">
-      <class name="Mylogin.sunny">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Mylogin.sunny@37f1104d]" started-at="2020-11-23T22:26:01 EST" name="setup" finished-at="2020-11-23T22:26:07 EST" duration-ms="6416" status="PASS">
+    <test started-at="2020-12-02T17:31:24 EST" name="logIn" finished-at="2020-12-02T17:31:31 EST" duration-ms="6091">
+      <class name="com.herokuapp.theinternet.loginpagetest.PositiveloginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@68e965f5]" started-at="2020-12-02T17:31:24 EST" name="setUp" finished-at="2020-12-02T17:31:30 EST" duration-ms="5109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://the-internet.herokuapp.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:Mylogin.sunny@37f1104d]" started-at="2020-11-23T22:26:07 EST" name="login" finished-at="2020-11-23T22:26:08 EST" duration-ms="729" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@68e965f5]" started-at="2020-12-02T17:31:30 EST" name="login" finished-at="2020-12-02T17:31:31 EST" duration-ms="927" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://the-internet.herokuapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[You logged into a secure area1!]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[it is not true as :You logged into a secure area!
+× expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: it is not true as :You logged into a secure area!
+× expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at com.herokuapp.theinternet.loginpagetest.PositiveloginTest.login(PositiveloginTest.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="close()[pri:0, instance:Mylogin.sunny@37f1104d]" started-at="2020-11-23T22:26:08 EST" name="close" finished-at="2020-11-23T22:26:09 EST" duration-ms="1106" status="PASS">
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@68e965f5]" started-at="2020-12-02T17:31:31 EST" name="cleanUp" finished-at="2020-12-02T17:31:31 EST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- Mylogin.sunny -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- cleanUp -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetest.PositiveloginTest -->
+    </test> <!-- logIn -->
+    <test started-at="2020-12-02T17:31:24 EST" name="logInFirefox" finished-at="2020-12-02T17:31:31 EST" duration-ms="6521">
+      <class name="com.herokuapp.theinternet.loginpagetest.PositiveloginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@4d910fd6]" started-at="2020-12-02T17:31:24 EST" name="setUp" finished-at="2020-12-02T17:31:30 EST" duration-ms="5326" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://the-internet.herokuapp.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@4d910fd6]" started-at="2020-12-02T17:31:30 EST" name="login" finished-at="2020-12-02T17:31:31 EST" duration-ms="1150" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://the-internet.herokuapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[You logged into a secure area!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@4d910fd6]" started-at="2020-12-02T17:31:31 EST" name="cleanUp" finished-at="2020-12-02T17:31:31 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetest.PositiveloginTest -->
+    </test> <!-- logInFirefox -->
+    <test started-at="2020-12-02T17:31:24 EST" name="logInIpad" finished-at="2020-12-02T17:31:33 EST" duration-ms="8595">
+      <class name="com.herokuapp.theinternet.loginpagetest.PositiveloginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@73ee04c8]" started-at="2020-12-02T17:31:24 EST" name="setUp" finished-at="2020-12-02T17:31:29 EST" duration-ms="4648" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ipad]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://the-internet.herokuapp.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="login(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@73ee04c8]" started-at="2020-12-02T17:31:29 EST" name="login" finished-at="2020-12-02T17:31:33 EST" duration-ms="3900" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://the-internet.herokuapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[You logged into a secure area!]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[it is not true as : expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: it is not true as : expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertTrue(Assert.java:43)
+at com.herokuapp.theinternet.loginpagetest.PositiveloginTest.login(PositiveloginTest.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:767)
+at org.testng.TestRunner.run(TestRunner.java:588)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:425)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:68)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:com.herokuapp.theinternet.loginpagetest.PositiveloginTest@73ee04c8]" started-at="2020-12-02T17:31:33 EST" name="cleanUp" finished-at="2020-12-02T17:31:33 EST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- com.herokuapp.theinternet.loginpagetest.PositiveloginTest -->
+    </test> <!-- logInIpad -->
+  </suite> <!-- PositveLoginTest -->
 </testng-results>

@@ -8,11 +8,33 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">8,293</td><td></td><td></td></tr>
+<tr><th colspan="8">PositveLoginTest</th></tr>
+<tr><td><a href="#t0">logIn</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">6,091</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">logInFirefox</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">6,521</td><td></td><td></td></tr>
+<tr><td><a href="#t2">logInIpad</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">8,595</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num">0</th><th class="num">0</th><th class="num attn">2</th><th class="num">21,207</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Mylogin.sunny</td><td><a href="#m0">login</a></td><td rowspan="1">1606188367766</td><td rowspan="1">729</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">PositveLoginTest</th></tr></tbody><tbody id="t0"><tr><th colspan="4">logIn &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.herokuapp.theinternet.loginpagetest.PositiveloginTest</td><td><a href="#m0">login</a></td><td rowspan="1">1606948290092</td><td rowspan="1">927</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">logInFirefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.herokuapp.theinternet.loginpagetest.PositiveloginTest</td><td><a href="#m1">login</a></td><td rowspan="1">1606948290309</td><td rowspan="1">1150</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">logInIpad &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.herokuapp.theinternet.loginpagetest.PositiveloginTest</td><td><a href="#m2">login</a></td><td rowspan="1">1606948289632</td><td rowspan="1">3900</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">Mylogin.sunny#login</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>logIn</h2><h3 id="m0">com.herokuapp.theinternet.loginpagetest.PositiveloginTest#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>https://the-internet.herokuapp.com</td><td>tomsmith</td><td>SuperSecretPassword!</td><td>You logged into a secure area1!</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: it is not true as :You logged into a secure area!
+× expected [true] but found [false]
+	at com.herokuapp.theinternet.loginpagetest.PositiveloginTest.login(PositiveloginTest.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>logInFirefox</h2><h3 id="m1">com.herokuapp.theinternet.loginpagetest.PositiveloginTest#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>https://the-internet.herokuapp.com</td><td>tomsmith</td><td>SuperSecretPassword!</td><td>You logged into a secure area!</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>logInIpad</h2><h3 id="m2">com.herokuapp.theinternet.loginpagetest.PositiveloginTest#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>https://the-internet.herokuapp.com</td><td>tomsmith</td><td>SuperSecretPassword!</td><td>You logged into a secure area!</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: it is not true as : expected [true] but found [false]
+	at com.herokuapp.theinternet.loginpagetest.PositiveloginTest.login(PositiveloginTest.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -20,20 +20,19 @@ dependencies {
     // Use TestNG framework, also requires calling test.useTestNG() below
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.141.59'
-    testImplementation 'org.testng:testng:7.2.0'
+    implementation 'org.testng:testng:7.2.0'
+
+	testCompile group: 'io.rest-assured', name: 'rest-assured', version: '4.3.2'
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:29.0-jre'
 }
 
-application {
-    // Define the main class for the application.
-    mainClass = 'suman_test.App'
-}
 
 tasks.named('test') {
-    // Use TestNG for unit tests.
+     //Use TestNG for unit tests.
     useTestNG(){
-    	suites 'src/test/resources/TestSuites/Ecxeption.xml'
-    }
+    	suites 'src/test/resources/TestSuites/Positive.xml'
+    	//suites 'src/test/resources/TestSuites/NegativeLogin_test.xml'
+   }
 }
